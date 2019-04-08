@@ -118,10 +118,10 @@ int main()
 	int nazwa_sort = 0;
 	 string sorts[3] = {"QUCIK_SORT", "MERGE_SORT", "INTRO_SORT"};
 
-    for(SortFncPoint<DataType> fp : sort_tabela) //typy sortowan
+    for(SortFncPoint<DataType> fp : sort_tabela) //typy sortowania
     {
          cout << sorts[nazwa_sort++] <<  endl;
-        for (double procent : procenttab) //procent posortowania tablicy
+        for (double procent : procenttab) //procent wstepnego posortowania tablicy
         {
             for (int n :  wielkosc_tablicy) // rozmiar tablicy
             {
@@ -136,7 +136,7 @@ int main()
                     suma_czasow += posortuj<DataType>(fp, n, tab, tmp);
                     czy_posortowane<DataType>(tab, n);
 
-                     cout << i << " posortowano" << "\r";//ile procent zrobione
+                     cout << i << " posortowano" << "\r";//licznik posortowanych tabel
                 }
 
                 usun_tabele<DataType>(tab);

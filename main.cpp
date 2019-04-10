@@ -90,7 +90,7 @@ template<typename Typ>
 double posortuj(SortFncPoint<DataType> fp, int n, Typ *tab, Typ *tmp)
 {
     auto t_start =  chrono::high_resolution_clock::now(); //poczatek liczenia czasu
-    fp(tab, tmp, 0, n-1, log(n) * 2);
+    fp(tab, tmp, 0, n-1, log2(n) * 2);
     auto t_end =  chrono::high_resolution_clock::now(); //koniec liczenia czasu
 
     return  chrono::duration<double,  milli>(t_end - t_start).count(); //zwraca roznice czasu w milisekundach

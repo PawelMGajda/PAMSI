@@ -129,7 +129,7 @@ void heapsort(Typ *left, Typ *right)
 template<typename Typ>
 void introsort(Typ *tab, Typ *left, Typ *right, int maxdepth)
 {
-	if ((right - left) < 1) insertionsort(tab, left - tab, right - tab);
+	if ((right - left) < 16) insertionsort(tab, left - tab, right - tab);
 	else if (maxdepth == 0) heapsort(left, right + 1);
 	else
     {
